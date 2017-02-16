@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <% include ../views/partials/_header.ejs %>
+</head>
+
+<body>
+  <% for (each in urls){%>
+    <li><%= each %> - <%= urls[each] %></li>
+    <form method="POST" action="/urls/<%= each %>/delete">
+      <input type="submit" value="Delete">
+    </form>
+  <% }; %>
+</body>
+</html>
+ 
